@@ -1,0 +1,89 @@
+{
+  "name": "bbs-test-fed",
+  "version": "0.0.1",
+  "description": "h5",
+  "main": "src/index.tsx",
+  "projectType": "h5",
+  "scripts": {
+    "prepare": "husky install",
+    "test": "mocha --require ts-node/register test/**/*.spec.ts",
+    "dev": "NODE_ENV=development webpack serve --hot -c webpack.config.js",
+    "prebuild": "yarn",
+    "build": "webpack -c webpack.config.js",
+    "lint": "eslint src --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint src --ext .js,.ts,.jsx,.tsx --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.hupu.com:foundation-frontend/bbs-test-fed.git"
+  },
+  "keywords": [
+    "slate",
+    "pc",
+    "editor"
+  ],
+  "author": "",
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.{j,t}s?(x)": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "peerDependencies": {
+    "ali-oss": "^6.16.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "firefox >= 84",
+    "chrome >= 94"
+  ],
+  "devDependencies": {
+    "@hupu/api-bridge": "^0.2.0",
+    "@hupu/bridge-plugin-common": "^0.0.54",
+    "@hupu/create-webpack-config": "^2.0.5",
+    "@hupu/eslint-config-hupu": "^1.0.22",
+    "@hupu/hp-tracer": "^1.5.8",
+    "@swc/core": "^1.2.111",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "browserslist": "^4.18.1",
+    "chai": "^4.3.4",
+    "css-loader": "^6.5.1",
+    "eslint": "^8.3.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^8.0.1",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "lint-staged": "^13.0.3",
+    "lottie-web": "^5.8.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "mocha": "^9.1.3",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.0.1",
+    "postcss-px-to-viewport": "^1.1.1",
+    "prettier": "^2.4.1",
+    "react-lottie": "^1.2.3",
+    "react-transition-group": "^4.4.2",
+    "style-loader": "^3.3.1",
+    "swc-loader": "^0.1.15",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.5.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0",
+    "webpack-merge": "^5.8.0"
+  }
+}

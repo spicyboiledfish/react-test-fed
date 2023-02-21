@@ -1,0 +1,40 @@
+@keyframes arrow-shink {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-65%) }
+  100% { transform: translateY(0) }
+}
+
+@keyframes arrow-shink2 {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-65%); opacity: 0.3; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.year-reporter-arrow {
+  position: absolute;
+  width: 23px;
+  height: 36px;
+  z-index: 20;
+
+  .bg {
+    position: absolute;
+    background: url(https://activity-static.hoopchina.com.cn/images/211223-y916evrc-upload-1640228763493-2.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    width: 23px;
+    height: 12px;
+    left: 0;
+  }
+
+  .a1 {
+    .bg();
+    top: 0px;
+    animation: arrow-shink 1.8s linear infinite;
+  }
+
+  .a2 {
+    .bg();
+    top: 9px;
+    animation: arrow-shink2 1.8s linear infinite;
+  }
+  
+}
